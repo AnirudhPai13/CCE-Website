@@ -45,6 +45,13 @@ header {
     text-align: center;
     width: 250px; /* Adjust as needed */
     height: 350px; /* Increased to fit larger photo */
+    transition: background-color 0.3s ease, box-shadow 0.4s ease;
+}
+
+.faculty-card:hover{
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    background-color: rgb(233, 230, 230);
+    
 }
 
 .faculty-photo {
@@ -66,7 +73,7 @@ p {
     margin: 0 0 15px;
 }
 .read-more {
-    margin-top: 10px;
+    margin-top: 10px; 
     padding: 10px 15px;
     background-color: #d1ff00;
     border: none;
