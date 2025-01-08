@@ -74,10 +74,11 @@ ul li a:hover{
 
 .content{
     width: 1200px;
-    height: auto;
+    height: 50%;
     margin: auto;
     color: #fff;
     position: relative;
+    
 }
 
 .content .par{
