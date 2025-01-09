@@ -83,49 +83,13 @@ p {
 
 .content{
     text-align: center;
-}
-
-.details-section {
-    margin: 20px;
-    display: none; /* Initially hidden */
-    position: relative;
-    z-index: 10;
-}
-
-.accordion {
-    width: 80%;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 20; /* Ensures it remains on top */
+    height: auto;
 }
 
 body {
     background-color: #f9f9f9;
 }
 
-.accordion-item {
-    border-bottom: 1px solid #ccc;
-}
 
-.accordion-button {
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-    background-color: #f0f0f0;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    outline: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.accordion-content {
-    padding: 15px;
-    display: none; /* Hidden by default */
-    background-color: #fafafa;
-}
+
