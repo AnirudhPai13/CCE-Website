@@ -42,9 +42,31 @@
                 <img src="images/hod.jpg" alt="HOD" class="faculty-photo">
                 <h3>DR. RADHAKRISHNA</h3>
                 <p>Professor & Head</p>
-                <a class="read-more button" href="#popup1">READ MORE</a>
+                <a class="read-more button" href="#popup1" onclick=showMoreInfo()>READ MORE</a>
             </div>
-            <div id="popup1" class="overlay">
+
+            <dialog id="more-info-dialogue">
+                <div id="popup1" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick=closeMoreInfo()>&times;</a>
+                        <div class="content">
+                            <img src="images/hod.jpg" alt="HOD" class="faculty-photo">
+                            <h2>DR. RADHAKRISHNA</h2>
+                            <div >
+                                <p><b>Designation: </b>Professor & Head</p>
+                                <p><b>Email: </b>radhakrishna@nitte.edu.in</p>
+                            </div>
+                            <ul class="accordion">
+                                <li>
+                                    <input type="radio" name="accordion" id="first">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </dialog>   
+            
+            <!-- <div id="popup1" class="overlay">
                 <div class="popup">
                     <a class="close" href="#">&times;</a>
                     <div class="content">
@@ -56,51 +78,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="details-section" id="details">
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-button" onclick="toggleAccordion(this)">Educational Qualifications</button>
-                        <div class="accordion-content">
-                            <ul>
-                                <li>BE - NMAM Institute Of Technology - 2003</li>
-                                <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
-                                <li>Ph.D</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-button" onclick="toggleAccordion(this)">Past Experience</button>
-                        <div class="accordion-content">
-                            <p><li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li></p>
-                            <p><li>20 years  of Teaching Experience in NMAMIT, Nitte</li></p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-button" onclick="toggleAccordion(this)">Areas of Interest</button>
-                        <div class="accordion-content">
-                            <p><li>Cryptography and Network Security</li></p>
-                            <p><li>Cyber Security and Forensics</li></p>
-                            <p><li>Machine Learning</li></p>
-                            <p><li>Database Management Systems</li></p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-button" onclick="toggleAccordion(this)">Subjects Taught</button>
-                        <div class="accordion-content">
-                            <p><li>Cryptography and Network Security</li></p>
-                            <p><li>Cyber Security and Forensics</li></p>
-                            <p><li>Data Communications</li></p>
-                            <p><li>Computer Networks</li></p>
-                            <p><li>Database Management Systems</li></p>
-                            <p><li>Computer Organization and Architecture</li></p>
-                            <p><li>Formal Languages and Automata Theory</li></p>
-                            <p><li>Programming Languages (C, C++), etc.</li></p>
-                            <p><li>Multicore Architecture and Programming</li></p>
-                        </div>
-                    </div>
-                </div>
             </div> -->
+
             <div class="faculty-card">
                 <img src="images/assir.jpeg" alt="L1" class="faculty-photo">
                 <h3>DR. ASHISH SINGH</h3>
