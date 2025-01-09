@@ -83,11 +83,13 @@ p {
 
 .content{
     text-align: center;
+    height: auto;
 }
 
 body {
     background-color: #f9f9f9;
 }
+
 
 
 

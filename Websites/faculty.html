@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/access-logo.png">
     <link rel="stylesheet" href="utility-classes/pop-up.css">
-    <link rel="stylesheet" href="styles/popup.css">
 </head>
 <body>
     <div class="navbar">
@@ -17,7 +16,7 @@
         </div>
 
         <div class="menu">
-            <ul>
+            <ul class="nav">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="faculty.html" style="color: #ff7200;">FACULTY</a></li>
                 <li><a href="committee_members.html">COMMITTEE MEMBERS</a></li>
@@ -37,18 +36,18 @@
         <h1>FACULTY OF THE DEPARTMENT OF CCE</h1>
     </header>
     <main>
-        <div class="faculty-container">
+        <di class="faculty-container">
             <div class="faculty-card">
                 <img src="images/hod.jpg" alt="HOD" class="faculty-photo">
                 <h3>DR. RADHAKRISHNA</h3>
                 <p>Professor & Head</p>
-                <a class="read-more button" href="#popup1" onclick=showMoreInfo()>READ MORE</a>
+                <a class="read-more button" href="#popup1" onclick="showMoreInfo('pop-up1')">READ MORE</a>
             </div>
 
-            <dialog id="more-info-dialogue">
+            <dialog id="pop-up1">
                 <div id="popup1" class="overlay">
                     <div class="popup wrapper">
-                        <a class="close" onclick=closeMoreInfo()>&times;</a>
+                        <a class="close" onclick="closeMoreInfo('pop-up1')">&times;</a>
                         <div class="content">
                             <img src="images/hod.jpg" alt="HOD" class="faculty-photo">
                             <h2>DR. RADHAKRISHNA</h2>
@@ -57,189 +56,751 @@
                                 <p><b>Email: </b>radhakrishna@nitte.edu.in</p>
                             </div>
                             <ul class="accordion">
-                                <li>
+                                <li class="accordian-li">
                                     <input type="radio" name="accordion" id="first">
+                                    <label for="first">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second">
+                                    <label for="second">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third">
+                                    <label for="third">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth">
+                                    <label for="fourth">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </dialog>   
-            
-            <!-- <div id="popup1" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/hod.jpg" alt="HOD" class="faculty-photo">
-                        <h2>DR. RADHAKRISHNA</h2>
-                        <div >
-                            <p><b>Designation: </b>Professor & Head</p>
-                            <p><b>Email: </b>radhakrishna@nitte.edu.in</p>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
 
             <div class="faculty-card">
-                <img src="images/assir.jpeg" alt="L1" class="faculty-photo">
+                <img src="images/assir.jpeg" alt="L2" class="faculty-photo">
                 <h3>DR. ASHISH SINGH</h3>
                 <p>Associate Professor</p>
-                <a class="read-more button" href="#popup2">READ MORE</a>
+                <a class="read-more button" href="#popup2" onclick="showMoreInfo('pop-up2')">READ MORE</a>
             </div>
-            <div id="popup2" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/assir.jpeg" alt="HOD" class="faculty-photo">
-                        <h2>DR. ASHISH SINGH</h2>
-                        <div >
-                            <p><b>Designation: </b>Associate Professor</p>
-                            <p><b>Email: </b>ashishsingh@nitte.edu.in</p>
+            
+            <dialog id="pop-up2">
+                <div id="popup2" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick="closeMoreInfo('pop-up2')">&times;</a>
+                        <div class="content">
+                            <img src="images/assir.jpeg" alt="L2" class="faculty-photo">
+                            <h2>DR. ASHISH SINGH</h2>
+                            <div >
+                                <p><b>Designation: </b>Associate Professor</p>
+                                <p><b>Email: </b>ashishsingh@nitte.edu.in</p>
+                            </div>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="first-popup2">
+                                    <label for="first-popup2">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second-popup2">
+                                    <label for="second-popup2">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third-popup2">
+                                    <label for="third-popup2">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth-popup2">
+                                    <label for="fourth-popup2">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </dialog>
 
             <div class="faculty-card">
                 <img src="images/snsir.jpeg" alt="L2" class="faculty-photo">
                 <h3>MR. SHRINIVASA</h3>
                 <p>Assistant Professor Gd-III</p>
                 <!-- <button class="read-more">READ MORE</button> -->
-                <a class="read-more button" href="#popup3">READ MORE</a>
-            </div>
-            <div id="popup3" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/snsir.jpeg" alt="HOD" class="faculty-photo">
-                        <h2>MR. SHRINIVASA</h2>
-                        <div >
-                            <p><b>Designation: </b>Assistant Professor Gd-III</p>
-                            <p><b>Email: </b>shrinivasa.naik@nitte.edu.in</p>
+                <a class="read-more button" href="#popup3" onclick="showMoreInfo('pop-up3')">READ MORE</a>
+            </div> 
+
+            <dialog id="pop-up3">
+                <div id="popup3" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick="closeMoreInfo('pop-up3')">&times;</a>
+                        <div class="content">
+                            <img src="images/snsir.jpeg" alt="L2" class="faculty-photo">
+                            <h2>MR. SHRINIVASA</h2>
+                            <div>
+                                <p><b>Designation: </b>Assistant Professor Gd-III</p>
+                                <p><b>Email: </b>shrinivasa.naik@nitte.edu.in</p>
+                            </div>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="first-popup3">
+                                    <label for="first-popup3">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second-popup3">
+                                    <label for="second-popup3">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third-popup3">
+                                    <label for="third-popup3">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth-popup3">
+                                    <label for="fourth-popup3">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </dialog>
 
             <div class="faculty-card">
                 <img src="images/massir.jpeg" alt="L3" class="faculty-photo">
                 <h3>MR. MANJUNATHA A S</h3>
                 <p>Assistant Professor Gd-III</p>
-                <a class="read-more button" href="#popup4">READ MORE</a>
-            </div>
-            <div id="popup4" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/massir.jpeg" alt="HOD" class="faculty-photo">
-                        <h2>MR. MANJUNATHA A S</h2>
-                        <div >
-                            <p><b>Designation: </b>Assistant Professor Gd-III</p>
-                            <p><b>Email: </b>manjunatha.as@nitte.edu.in</p>
-                        </div>
-                    </div>
-                </div>
+                <a class="read-more button" href="#popup4" onclick="showMoreInfo('pop-up4')">READ MORE</a>
             </div>
 
-            <div class="faculty-card">
-                <img src="images/kpsir.jpeg" alt="L4" class="faculty-photo">
-                <h3>MR. KRISHNA PRASAD RAO DS</h3>
-                <p>Assistant Professor Gd-II</p>
-                <a class="read-more button" href="#popup5">READ MORE</a>
-            </div>
-            <div id="popup5" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/kpsir.jpeg" alt="HOD" class="faculty-photo">
-                        <h2>MR. KRISHNA PRASAD RAO DS</h2>
-                        <div >
-                            <p><b>Designation: </b>Assistant Professor Gd-II</p>
-                            <p><b>Email: </b>krishnaprasad.cc@nitte.edu.in</p>
+            <dialog id="pop-up4">
+                <div id="popup4" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick="closeMoreInfo('pop-up4')">&times;</a>
+                        <div class="content">
+                            <img src="images/massir.jpeg" alt="L4" class="faculty-photo">
+                            <h2>MR. MANJUNATHA A S</h2>
+                            <div>
+                                <p><b>Designation: </b>Assistant Professor Gd-III</p>
+                                <p><b>Email: </b>manjunatha.as@nitte.edu.in</p>
+                            </div>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="first-popup4">
+                                    <label for="first-popup4">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second-popup4">
+                                    <label for="second-popup4">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third-popup4">
+                                    <label for="third-popup4">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth-popup4">
+                                    <label for="fourth-popup4">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+            </dialog>
+
+            <div class="faculty-card">
+                <img src="images/kpsir.jpeg" alt="L5" class="faculty-photo">
+                <h3>MR. KRISHNA PRASAD RAO DS</h3>
+                <p>Assistant Professor Gd-II</p>
+                <a class="read-more button" href="#popup5" onclick="showMoreInfo('pop-up5')">READ MORE</a>
             </div>
+
+            <dialog id="pop-up5">
+                <div id="popup5" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick="closeMoreInfo('pop-up5')">&times;</a>
+                        <div class="content">
+                            <img src="images/kpsir.jpeg" alt="L4" class="faculty-photo">
+                            <h2>MR. MANJUNATHA A S</h2>
+                            <div>
+                                <p><b>Designation: </b>Assistant Professor Gd-III</p>
+                                <p><b>Email: </b>manjunatha.as@nitte.edu.in</p>
+                            </div>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="first-popup5">
+                                    <label for="first-popup5">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second-popup5">
+                                    <label for="second-popup5">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third-popup5">
+                                    <label for="third-popup5">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth-popup5">
+                                    <label for="fourth-popup5">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </dialog>
 
             <div class="faculty-card">
                 <img src="images/sksir.jpeg" alt="L5" class="faculty-photo">
                 <h3>MR. SANDEEP KUMAR S</h3>
                 <p>Associate Professor Gd-II</p>
-                <a class="read-more button" href="#popup6">READ MORE</a>
+                <a class="read-more button" href="#popup6" onclick="showMoreInfo('pop-up6')">READ MORE</a>
             </div>
-            <div id="popup6" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/sksir.jpeg" alt="HOD" class="faculty-photo">
-                        <h2>MR. SANDEEP KUMAR S</h2>
-                        <div >
-                            <p><b>Designation: </b>Associate Professor Gd-II</p>
-                            <p><b>Email: </b>sandeep.kumar@nitte.edu.in</p>
+
+            <dialog id="pop-up6">
+                <div id="popup6" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick="closeMoreInfo('pop-up6')">&times;</a>
+                        <div class="content">
+                            <img src="images/sksir.jpeg" alt="L4" class="faculty-photo">
+                            <h2>MR. SANDEEP KUMAR S</h2>
+                            <div>
+                                <p><b>Designation: </b>Associate Professor Gd-II</p>
+                                <p><b>Email: </b>sandeep.kumar@nitte.edu.in</p>
+                            </div>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="first-popup6">
+                                    <label for="first-popup6">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second-popup6">
+                                    <label for="second-popup6">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third-popup6">
+                                    <label for="third-popup6">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth-popup6">
+                                    <label for="fourth-popup6">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </dialog>
 
             <div class="faculty-card">
                 <img src="images/ctsir.jpeg" alt="L6" class="faculty-photo">
                 <h3>MR. CHIDANANDA T</h3>
                 <p>Assistant Professor Gd-I</p>
-                <a class="read-more button" href="#popup7">READ MORE</a>
+                <a class="read-more button" href="#popup7" onclick="showMoreInfo('pop-up7')">READ MORE</a>
             </div>
-            <div id="popup7" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/ctsir.jpeg" alt="HOD" class="faculty-photo">
-                        <h2>MR. CHIDANANDA T</h2>
-                        <div >
-                            <p><b>Designation: </b>Assistant Professor Gd-I</p>
-                            <p><b>Email: </b>chidananda.t@nitte.edu.in</p>
+
+            <dialog id="pop-up7">
+                <div id="popup7" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick="closeMoreInfo('pop-up7')">&times;</a>
+                        <div class="content">
+                            <img src="images/ctsir.jpeg" alt="L4" class="faculty-photo">
+                            <h2>MR. CHIDANANDA T</h2>
+                            <div>
+                                <p><b>Designation: </b>Assistant Professor Gd-I</p>
+                                <p><b>Email: </b>chidananda.t@nitte.edu.in</p>
+                            </div>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="first-popup7">
+                                    <label for="first-popup7">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second-popup7">
+                                    <label for="second-popup7">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third-popup7">
+                                    <label for="third-popup7">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth-popup7">
+                                    <label for="fourth-popup7">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </dialog>
 
             <div class="faculty-card">
                 <img src="images/mkm.jpeg" alt="L7" class="faculty-photo">
                 <h3>DR. MAMTHA K M</h3>
                 <p>Assistant Professor Gd-I</p>
-                <a class="read-more button" href="#popup8">READ MORE</a>
+                <a class="read-more button" href="#popup8" onclick="showMoreInfo('pop-up8')">READ MORE</a>
             </div>
-            <div id="popup8" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/mkm.jpeg" alt="HOD" class="faculty-photo">
-                        <h2>DR. MAMTHA K M</h2>
-                        <div>
-                            <p><b>Designation: </b>Assistant Professor Gd-I</p>
-                            <p><b>Email: </b>mamatha.km@nitte.edu.in</p>
+
+            <dialog id="pop-up8">
+                <div id="popup8" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick="closeMoreInfo('pop-up8')">&times;</a>
+                        <div class="content">
+                            <img src="images/mkm.jpeg" alt="L4" class="faculty-photo">
+                            <h2>DR. MAMTHA K M</h2>
+                            <div>
+                                <p><b>Designation: </b>Assistant Professor Gd-I</p>
+                                <p><b>Email: </b>mamatha.km@nitte.edu.in</p>
+                            </div>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="first-popup8">
+                                    <label for="first-popup8">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second-popup8">
+                                    <label for="second-popup8">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third-popup8">
+                                    <label for="third-popup8">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth-popup8">
+                                    <label for="fourth-popup8">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </dialog>
 
             <div class="faculty-card">
                 <img src="images/jpmaam.jpeg" alt="L8" class="faculty-photo">
                 <h3>MS. JYOTHI PRASAD</h3>
                 <p>Assistant Professor Gd-III</p>
-                <a class="read-more button" href="#popup9">READ MORE</a>
+                <a class="read-more button" href="#popup9" onclick="showMoreInfo('pop-up9')">READ MORE</a>
             </div>
-            <div id="popup9" class="overlay">
-                <div class="popup">
-                    <a class="close" href="#">&times;</a>
-                    <div class="content">
-                        <img src="images/jpmaam.jpeg" alt="HOD" class="faculty-photo">
-                        <h2>MS. JYOTHI PRASAD</h2>
-                        <div >
-                            <p><b>Designation: </b>Assistant Professor Gd-I</p>
-                            <p><b>Email: </b>jyohti.prasad@nitte.edu.in</p>
+
+            <dialog id="pop-up9">
+                <div id="popup9" class="overlay">
+                    <div class="popup wrapper">
+                        <a class="close" onclick="closeMoreInfo('pop-up9')">&times;</a>
+                        <div class="content">
+                            <img src="images/jpmaam.jpeg" alt="L4" class="faculty-photo">
+                            <h2>MS. JYOTHI PRASAD</h2>
+                            <div>
+                                <p><b>Designation: </b>Assistant Professor Gd-I</p>
+                                <p><b>Email: </b>jyohti.prasad@nitte.edu.in</p>
+                            </div>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="first-popup9">
+                                    <label for="first-popup9">Education Qualification</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>BE - NMAM Institute Of Technology - 2003 .</li>
+                                            <li>M. Tech. - NMAM Institute of Technology Nitte 2007</li>
+                                            <li>Ph. D  </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="second-popup9">
+                                    <label for="second-popup9">Past Experience</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>6 months of Teaching as  Lecturer in SGS College , Bhatkal</li>
+                                            <li>20 years  of Teaching Experience in NMAMIT, Nitte</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="third-popup9">
+                                    <label for="third-popup9">Areas of Interest</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network Security</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Machine Learning</li>
+                                            <li>Database Management Systems</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion">
+                                <li class="accordian-li">
+                                    <input type="radio" name="accordion" id="fourth-popup9">
+                                    <label for="fourth-popup9">Subjects Teaching</label>
+                                    <div class="dropdown-content">
+                                        <ul>
+                                            <li>Cryptography and Network</li>
+                                            <li>Cyber Security and Forensics</li>
+                                            <li>Data Communications</li>
+                                            <li>Computer Networks</li>
+                                            <li>Formal Languages and Automata Theory</li>
+                                            <li>Database Management Systems</li>
+                                            <li>Computer Organization and Architecture</li>
+                                            <li>Multicore Architecture and Programming</li>
+                                            <li>Programming Languages (C, C++), etc.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
+            </dialog>
 
         </div>
     </main>

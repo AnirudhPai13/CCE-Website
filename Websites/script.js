@@ -1,18 +1,20 @@
 // Pop-up window
-const popup = document.getElementById("more-info-dialogue");
-const wrapper = document.querySelector(".wrapper");
-
-function showMoreInfo(){
+function showMoreInfo(popupId){
+    const popup = document.getElementById(popupId);
     popup.showModal();
 }
 
-function closeMoreInfo() {
+function closeMoreInfo(popupId) {
+    const popup = document.getElementById(popupId);
     popup.close();
 }
 
-popup.addEventListener("click", (e) => {
-    if(!wrapper.contains(e.target))
-    {
-        popup.close();
-    }
+// Close popup when clicking outside the content
+document.querySelectorAll('dialog').forEach((popup) => {
+    const wrapper = popup.querySelector(".wrapper");
+    popup.addEventListener("click", (e) => {
+        if (!wrapper.contains(e.target)) {
+            popup.close();
+        }
+    });
 });
