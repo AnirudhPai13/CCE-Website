@@ -97,6 +97,14 @@ ul li a:hover{
     letter-spacing: 2px;
 }
 
+.home-heading{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
 .content .cn{
     width: 160px;
     height: 40px;
@@ -123,7 +131,7 @@ ul li a:hover{
 
 .content span{
     color: #ff7200;
-    font-size: 65px
+    font-size: 65px;
 }
 
 .form{
@@ -173,18 +181,19 @@ ul li a:hover{
     color: #fff;
     font-family: Arial;
 }
-.main-content {
+/* .main-content {
     padding: 20px;
     max-width: 1200px;
-    margin: 0 auto;
-}
+} */
 
 /* Department Info Section */
 .department-info {
-    padding: 20px;
+    padding: 2rem;
+    top: 0;
+    margin: 1.5rem;
     border-radius: 5px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
 }
 
 .department-info h1 {
